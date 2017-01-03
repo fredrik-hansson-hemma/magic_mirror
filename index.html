@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMHI Open Data API Docs - Meteorological Forecasts</title>
+
+<link rel="shortcut icon" href="../favicon.ico" />
+<!-- Bootstrap -->
+<link href="http://opendata.smhi.se/apidocs/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://opendata.smhi.se/apidocs/css/smhi-apidoc.css" rel="stylesheet">
+<link href="http://opendata.smhi.se/apidocs/css/smhi-apidocs-metfcst.css" rel="stylesheet">
+
+<script src="http://opendata.smhi.se/apidocs/css/L.Control.MousePosition.css"></script>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+</head>
+<body data-page="demo-point">
+  <div class="container">
+    
+    <div class="page-header">
+      <h1>SMHI Open Data API Docs - Meteorological Forecasts</h1>
+      <p class="lead">Web API for consuming data about Meteorological Forecasts.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2">
+        <p id="menu"></p>
+      </div>
+
+      <div id="content" class="col-sm-10">
+
+        <h2 id="about">About</h2>
+        <p>
+          This demo is an example of using the API for getting a forecast for a point with
+          <code>javascript</code>
+          and
+          <code>JSON</code>
+          . There is no warranties for it's completeness but should be a good starting point for web developers. Have a look at the source of this
+          page and the associated <a href="http://opendata.smhi.se/apidocs/js/smhi-opendata-metfcst-point.js">Javascript</a>.
+        </p>
+
+        <h2 id="try-it">Try it</h2>
+        <p>
+          This demo itself does not do much. It is based on
+          <code>category</code>
+          pmp2g (
+          <code>version</code>
+          2). Select a point in the map. Data for the selected <a href="parameters.html">Parameter</a> will show.
+        </p>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="row">
+              <h3>Select point</h3>
+              <div id="map" style="height: 480px;"></div>
+            </div>
+            <table class="table table-condensed" style="font-size: 0.85em;">
+              <thead>
+                <tr>
+                  <th>Selected latitude</th>
+                  <th>Selected longitude</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="selected-latitude"></td>
+                  <td id="selected-longitude"></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Returned latitude</th>
+                  <th>Returned longitude</th>
+                  <th>Reference time</th>
+                  <th>Approved time</th>
+                </tr>
+                <tr>
+                  <td id="returned-latitude"></td>
+                  <td id="returned-longitude"></td>
+                  <td id="reference-time"></td>
+                  <td id="approved-time"></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+          <div class="col-sm-2">
+            <h3>Parameters</h3>
+            <div class="demo-content" style="height: 650px; overflow: auto;">
+              <ul id="demo-parameters" class="list-unstyled"></ul>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <h3>Values</h3>
+            <div class="demo-content" style="height: 600px; overflow: auto">
+              <p id="demo-values"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://opendata.smhi.se/apidocs/js/jquery-1.11.1.min.js"></script>
+  <script src="http://opendata.smhi.se/apidocs/js/bootstrap.min.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="http://opendata.smhi.se/apidocs/js/L.Control.MousePosition.js"></script>
+  <script src="http://opendata.smhi.se/apidocs/js/smhi-apidocs.js"></script>
+  <script src="http://opendata.smhi.se/apidocs/js/smhi-apidocs-metfcst.js"></script>
+  <script src="http://opendata.smhi.se/apidocs/js/smhi-opendata-metfcst-point.js"></script>
+</body>
+</html>
